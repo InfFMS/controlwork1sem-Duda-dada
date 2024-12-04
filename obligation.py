@@ -42,3 +42,50 @@
 #
 # -----------------------------------------------------------------------------
 # Напишите программу ниже:
+
+ob=int(input())
+#'obligation price'
+pr=int(input())
+#'price of oblegation close'
+on=int(input())
+#once payment
+pay=int(input())
+#payment per month'
+c=int(input())
+#brokers commission'
+t=int(input())
+#time to pay
+def commision(comm):
+    comm=ob*(c*100)
+def full_price(full):
+    full=ob+comm
+def summarise_sale_ticket_payment(cup):
+    cup=on*t/pay
+def before_nalog(sumpayment):
+    sumpayment=cup+pr-full
+def nalog(nal):
+    if sumpayment>0:
+        nal=sumpayment*0.013
+    else:
+        nal=0
+def clean_payment(cl):
+    cl= (sumpayment-nal)/(full*100)
+
+cup = on * t / pay
+comm = ob * (c * 100)
+full = ob + comm
+sumpayment = cup + pr - full
+nal = sumpayment * 0.013
+cl= (sumpayment-nal)/(full*100)
+
+print(ob,'obligation price', pr,'price of oblegation close', on , 'once payment', pay ,'payment per month', c ,'brokers commission' , t , 'time to pay')
+
+return(commision(comm))
+return(full_price(full))
+return(summarise_sale_ticket_payment(cup))
+return(before_nalog(sumpayment))
+return(nalog(nal))
+return(clean_payment(cl))
+
+
+
